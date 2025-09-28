@@ -1,0 +1,31 @@
+// Função de Soma
+function soma(a, b) {
+  return a + b;
+}
+
+// Função de Subtração
+const subtrai = (a, b) => a - b;
+
+// Função de Multiplicação
+function multiplica(a, b) {
+  return a * b;
+}
+
+// Função de Divisão
+const divide = (a, b) => {
+  if (b === 0) {
+    return 'Erro: divisão por zero';
+  }
+  return a / b;
+};
+
+// Função que mostra todos os resultados no console
+function mostraResultado(num1, num2) {
+  console.log(`Soma entre ${num1} e ${num2}: ${soma(num1, num2)}`);
+  console.log(`Subtração entre ${num1} e ${num2}: ${subtrai(num1, num2)}`);
+  console.log(`Multiplicação entre ${num1} e ${num2}: ${multiplica(num1, num2)}`);
+  console.log(`Divisão entre ${num1} e ${num2}: ${divide(num1, num2)}`);
+}
+
+// Teste
+mostraResultado(10, 5);
