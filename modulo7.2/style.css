@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.search-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#campoBusca {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#btnBuscar {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#btnBuscar:hover {
+  background-color: #2980b9;
+}
+
+#listaUsuarios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.usuario img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.usuario a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+#mensagem {
+  margin-top: 10px;
+  color: #e74c3c;
+  font-weight: bold;
+}
