@@ -1,0 +1,65 @@
+//️ Array para armazenar os livros
+let estoque = [];
+
+// Função para adicionar livro
+function adicionarLivro(titulo, autor, quantidade) {
+  // Verifica se o livro já existe
+  for (let livro of estoque) {
+    if (livro.titulo === titulo) {
+      console.log(` O livro "${titulo}" já está no estoque.`);
+      return;
+    }
+  }
+
+  // Adiciona o novo livro
+    estoque.push({ titulo, autor, quantidade });
+    console.log(`Livro "${titulo}" adicionado com sucesso!`);
+}
+
+// Função para remover livro
+function removerLivro(titulo) {
+  for (let i = 0; i < estoque.length; i++) {
+    if (estoque[i].titulo === titulo) {
+      estoque.splice(i, 1);
+      console.log(` Livro "${titulo}" removido do estoque.`);
+      return;
+    }
+  }
+  console.log(`Livro "${titulo}" não encontrado no estoque.`);
+}
+
+//️ Função para atualizar quantidade
+function atualizarQuantidade(titulo, novaQuantidade) {
+  for (let livro of estoque) {
+    if (livro.titulo === titulo) {
+      livro.quantidade = novaQuantidade;
+      console.log(` Quantidade do livro "${titulo}" atualizada para ${novaQuantidade}.`);
+      return;
+    }
+  }
+  console.log(` Livro "${titulo}" não encontrado para atualização.`);
+}
+
+// Função para listar todos os livros
+function listarLivros() {
+  console.log("Estoque de Livros:");
+  if (estoque.length === 0) {
+    console.log("Nenhum livro no estoque.");
+    return;
+  }
+
+  for (let livro of estoque) {
+    console.log(`- ${livro.titulo} | Autor: ${livro.autor} | Quantidade: ${livro.quantidade}`);
+  }
+}
+
+// Testando o sistema
+adicionarLivro("Dom Casmurro", "Machado de Assis", 5);
+adicionarLivro("O Hobbit", "J.R.R. Tolkien", 10);
+listarLivros();
+
+atualizarQuantidade("Dom Casmurro", 8);
+removerLivro("O Hobbit");
+listarLivros();
+
+removerLivro("Harry Potter"); // Teste de livro inexistente
