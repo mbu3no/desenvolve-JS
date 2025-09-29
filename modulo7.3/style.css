@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#descricao {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#btnAdicionar {
+  padding: 8px 12px;
+  background-color: #5563DE;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#btnAdicionar:hover {
+  background-color: #3b4cc0;
+}
+
+#listaTarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.tarefa-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.descricao {
+  font-size: 16px;
+}
+
+.concluida {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.btn-excluir {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
+}
